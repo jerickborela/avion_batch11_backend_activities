@@ -1,0 +1,20 @@
+create table Students(
+    id integer primary key,
+    name character varying(50) not null,
+    course character varying(50)not null,
+    age numeric not null
+);
+
+insert into Students(id,name,course,age) values (1,'Ana','Fine Arts',20);
+insert into Students(id,name,course,age) values (2,'Betty','Engineering',22);
+insert into Students(id,name,course,age) values (3,'Cherry','Biology',18);
+insert into Students(id,name,course,age) values (4,'Dianne','History',19);
+insert into Students(id,name,course,age) values (5,'Emily','Medicine',25);
+
+select * from students order by age desc;
+
+select avg(age) from students;
+
+select sum(age) from students;
+
+select * from students having age>24 or age<33;
